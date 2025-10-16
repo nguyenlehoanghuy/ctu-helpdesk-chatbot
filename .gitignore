@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Logs
+*.log
+
+# Data folders (ignore if data is large or sensitive)
+data/
+data/*
+
+# Model checkpoints and large files
+models/
+models/*

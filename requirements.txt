@@ -1,0 +1,21 @@
+# Core
+numpy
+pandas
+# Web
+flask
+flask-cors
+# NLP
+nltk
+underthesea
+transformers
+sentence-transformers
+rank-bm25
+# ML/DL
+torch
+scikit-learn
+faiss-cpu
+peft
+bitsandbytes
+# Utils
+requests
+python-dotenv
