@@ -45,4 +45,4 @@ pip install -r requirements.txt
 
 ## License & Acknowledgments
 
-This project is part of my Master's thesis at Can Tho University. All rights reserved.
+This project is part of my Master's project in Information Systems at Can Tho University. All rights reserved.

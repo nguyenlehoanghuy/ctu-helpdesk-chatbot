@@ -43,7 +43,7 @@ class CTUChatbot:
             self.model = AutoModelForCausalLM.from_pretrained(
                 model_path,
                 dtype=torch.bfloat16 if self.device == "cuda" else torch.float32,
-                device_map="auto" if self.device == "cuda" else None,
+                device_map="auto" if self.device == "cuda" else None
             )
             self.tokenizer = AutoTokenizer.from_pretrained(model_path)
             logger.info(f"✅ Model loaded from: {model_path}")
@@ -62,7 +62,7 @@ class CTUChatbot:
                 return "Xin hãy nhập câu hỏi hợp lệ."
 
             # Retrieve top documents
-            results = self.retrieval.search(query, top_k=3, method='hybrid')
+            results = self.retrieval.search(query, top_k=1, method='hybrid')
             if not results:
                 logger.warning(f"⚠️ No retrieval results for query: {query}")
                 context = "(Không tìm thấy dữ liệu phù hợp.)"
@@ -80,12 +80,10 @@ class CTUChatbot:
                 context = "\n\n".join(contexts)
 
             # Build prompt
-            prompt = (
-                f"Dựa vào thông tin sau đây về hệ thống CTU Helpdesk:\n{context}\n\n"
-                f"Hãy trả lời câu hỏi: {query}\n"
-            )
+            prompt = f"Dựa vào thông tin sau đây về hệ thống CTU Helpdesk:\n\n{context}\n\nHãy trả lời câu hỏi: {query}"
+
             messages = [
-                {"role": "system", "content": "Bạn là trợ lý AI Helpdesk CTU."},
+                {"role": "system", "content": "Bạn là trợ lý AI cho hệ thống Helpdesk CTU."},
                 {"role": "user", "content": prompt}
             ]
 
