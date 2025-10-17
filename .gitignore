@@ -10,8 +10,8 @@ env/
 *.log
 
 # Data folders (ignore if data is large or sensitive)
-data/
-data/*
+data/*/
+data/ctu_chatbot_dataset.csv
 
 # Model checkpoints and large files
 models/
