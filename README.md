@@ -23,8 +23,8 @@ This project is a Master's Thesis work focused on building an AI-powered chatbot
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/nguyenlehoanghuy/ctu_helpdesk_chatbot.git
-cd ctu_helpdesk_chatbot
+git clone https://github.com/nguyenlehoanghuy/ctu-helpdesk-chatbot.git
+cd ctu-helpdesk-chatbot
 ```
 
 2. Install dependencies:
